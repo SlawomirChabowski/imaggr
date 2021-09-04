@@ -12,17 +12,17 @@
 </template>
 
 <script>
-import Thumbnail from './Thumbnail.vue'
+import Thumbnail from './Thumbnail.vue';
 export default {
-  name: 'ImageGrid',
-  components: { Thumbnail },
-  props: {
-    images: {
-      type: Array,
-      required: true
-    }
-  }
-}
+    name: 'ImageGrid',
+    components: { Thumbnail },
+    props: {
+        images: {
+            type: Array,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style scoped>

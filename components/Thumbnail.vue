@@ -12,22 +12,22 @@
 
 <script>
 export default {
-  name: 'Thumbnail',
-  props: {
-    src: {
-      type: String,
-      required: true
+    name: 'Thumbnail',
+    props: {
+        src: {
+            type: String,
+            required: true,
+        },
+        alt: {
+            type: String,
+            default: null,
+        },
+        title: {
+            type: String,
+            default: null,
+        },
     },
-    alt: {
-      type: String,
-      default: null
-    },
-    title: {
-      type: String,
-      default: null
-    }
-  }
-}
+};
 </script>
 
 <style scoped>

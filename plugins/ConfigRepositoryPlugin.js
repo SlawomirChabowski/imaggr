@@ -1,5 +1,5 @@
-import { ConfigRepository } from '~/repositories/ConfigRepository'
+import { ConfigRepository } from '~/repositories/ConfigRepository';
 
 export default (context, inject) => {
-  inject('configRepository', new ConfigRepository())
-}
+    inject('configRepository', new ConfigRepository());
+};

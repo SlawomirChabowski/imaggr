@@ -12,11 +12,11 @@
 
 <script>
 export default {
-  name: 'Default',
-  computed: {
-    darkModeEnabled () {
-      return this.$configRepository.isDarkModeEnabled()
-    }
-  }
-}
+    name: 'Default',
+    computed: {
+        darkModeEnabled () {
+            return this.$configRepository.isDarkModeEnabled();
+        },
+    },
+};
 </script>
