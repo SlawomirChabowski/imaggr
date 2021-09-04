@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import { ENVIRONMENTAL_VARIABLES } from './enums/Environment'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -31,6 +32,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/ConfigRepositoryPlugin.js',
+    '~plugins/ImageRepositoryPlugin.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,11 +49,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/http'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    defaultAssets: {
+      icons: 'md'
+    },
     theme: {
       dark: true,
       themes: {
@@ -69,5 +76,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  env: {
+    [ENVIRONMENTAL_VARIABLES.PIXABAY_API_KEY]: process.env[ENVIRONMENTAL_VARIABLES.PIXABAY_API_KEY],
+    [ENVIRONMENTAL_VARIABLES.UNSPLASH_API_KEY]: process.env[ENVIRONMENTAL_VARIABLES.UNSPLASH_API_KEY]
   }
 }
