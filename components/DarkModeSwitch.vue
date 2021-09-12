@@ -1,6 +1,7 @@
 <template>
   <v-switch
     v-model="enabled"
+    color="blue lighten-5"
     hide-details
     append-icon="mode_night"
     prepend-icon="light_mode"
@@ -22,9 +23,7 @@ export default {
         },
     },
     created () {
-        if (this.$configRepository.isDarkModeEnabled()) {
-            this.$vuetify.theme.dark = true;
-        }
+        this.$vuetify.theme.dark = this.$configRepository.isDarkModeEnabled();
     },
 };
 </script>
